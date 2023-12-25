@@ -1,0 +1,82 @@
+.galery {
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    /* background-color: rgb(233, 233, 233); */
+
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items :center;
+}
+
+.galery div {
+    width: 30%;
+    height: 45%;
+    /* background-color: lightpink; */
+}
+
+.galery div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    /* object-position: 50% 25%; */
+
+}
+
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top : 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.832);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color : whitesmoke;
+
+}
+
+.modal img {
+    width: 50%;
+    margin: auto;
+}
+
+.modal span {
+    position: absolute;
+    top : 5%;
+    right: 5%;
+
+    font-size: larger;
+    font-weight: bold;
+
+    cursor: pointer;
+    user-select: none; /* Rend l'élément non selectionnable à la selection */
+}
+
+.hidden {
+    display: none;
+}
+
+.img-popping {
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
